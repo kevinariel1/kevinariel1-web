@@ -30,18 +30,16 @@ export default function Home() {
           🚀 Fullstack Developer
         </span>
         <h1 style={{ fontSize: 'clamp(3rem, 8vw, 5rem)', letterSpacing: '-0.02em', marginBottom: '1.5rem' }}>
-          Crafting <span className="text-gradient">Digital</span> <br/>
-          Experiences
+          Hi, I'm <span className="text-gradient">Kevin</span>
         </h1>
         <p style={{ 
           fontSize: '1.25rem', 
           color: 'rgba(255,255,255,0.7)', 
-          maxWidth: '600px', 
+          maxWidth: '700px', 
           margin: '0 auto 2.5rem',
           lineHeight: '1.8'
         }}>
-          I build full-stack web applications with modern technologies like React, Next.js, and Node.js. 
-          Bringing ideas to life on the internet.
+          I'm a Computer Science Fresh Graduate from Indonesia. I specialize in building full-stack applications with the MERN and PERN stacks, and occasionally use Kotlin for Android.
         </p>
         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
           <a href="#projects" className="btn btn-primary">View My Work</a>
@@ -55,20 +53,22 @@ export default function Home() {
           <div>
             <h2>About <span className="text-gradient">Me</span></h2>
             <p style={{ color: 'rgba(255,255,255,0.8)', marginBottom: '1.5rem' }}>
-              I'm a passionate developer focusing on building robust backend systems and beautiful, intuitive user interfaces.
-              I thrive in solving complex problems and learning bleeding-edge technologies.
+              I focus heavily on creating robust backend systems and intuitive user interfaces. I typically use the <strong>MERN</strong> (MongoDB, Express, React JS, Node.js) or <strong>PERN</strong> setup with PostgreSQL.
+              Aside from web development, I have experience working with Python, TailwindCSS, TypeScript, and Android development via Kotlin.
             </p>
             <div style={{ marginTop: '2rem' }}>
-              <div className="tag">TypeScript</div>
-              <div className="tag">React / Next.js</div>
+              <div className="tag">MongoDB</div>
+              <div className="tag">Express</div>
+              <div className="tag">React JS</div>
               <div className="tag">Node.js</div>
               <div className="tag">PostgreSQL</div>
-              <div className="tag">GraphQL</div>
+              <div className="tag">TypeScript</div>
+              <div className="tag">Python</div>
               <div className="tag">TailwindCSS</div>
+              <div className="tag">Kotlin / Android</div>
             </div>
           </div>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
-            {/* Visual element representing code */}
             <div style={{ 
               background: '#1a1a24', 
               borderRadius: '12px', 
@@ -84,9 +84,10 @@ export default function Home() {
               </div>
               <code style={{ color: '#a5b4fc', display: 'block', fontSize: '0.9rem' }}>
                 <span style={{ color: '#ec4899' }}>const</span> developer = {'{'}
-                <br/>&nbsp;&nbsp;name: <span style={{ color: '#10b981' }}>'Wait For Input'</span>,
-                <br/>&nbsp;&nbsp;focus: <span style={{ color: '#10b981' }}>'Fullstack Web'</span>,
-                <br/>&nbsp;&nbsp;drivenBy: <span style={{ color: '#10b981' }}>'Passion & Coffee'</span>
+                <br/>&nbsp;&nbsp;name: <span style={{ color: '#10b981' }}>'Kevin'</span>,
+                <br/>&nbsp;&nbsp;graduated: <span style={{ color: '#10b981' }}>'Computer Science'</span>,
+                <br/>&nbsp;&nbsp;location: <span style={{ color: '#10b981' }}>'Indonesia'</span>,
+                <br/>&nbsp;&nbsp;focus: <span style={{ color: '#10b981' }}>['MERN', 'PERN']</span>
                 <br/>{'}'};
               </code>
             </div>
@@ -98,22 +99,23 @@ export default function Home() {
       <section id="projects" className="animate-fade-in delay-200" style={{ paddingTop: '8rem' }}>
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
           <h2>Featured <span className="text-gradient">Projects</span></h2>
-          <p style={{ color: 'rgba(255,255,255,0.7)' }}>Some of my recent fullstack creations</p>
+          <p style={{ color: 'rgba(255,255,255,0.7)' }}>Some of my recent best fullstack creations</p>
         </div>
 
         <div className="grid-3">
           {PROJECTS.map((proj, idx) => (
             <div key={idx} className="glass project-card" style={{ overflow: 'hidden', padding: 0, transition: 'transform 0.3s' }}>
-              <div style={{ height: '200px', background: `linear-gradient(145deg, ${proj.color1}, ${proj.color2})`, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                 {/* Placeholder for project mockups */}
-                 <h3 style={{ color: 'white', opacity: 0.8, margin: 0, textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}>{proj.title} Mockup</h3>
+              <div style={{ height: '200px', background: `linear-gradient(145deg, ${proj.color1}, ${proj.color2})`, display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '1rem' }}>
+                 <h3 style={{ color: 'white', opacity: 0.9, margin: 0, textShadow: '0 2px 10px rgba(0,0,0,0.5)', fontSize: '1.25rem' }}>{proj.title} Mockup</h3>
               </div>
               <div style={{ padding: '2rem' }}>
-                <h3 style={{ marginBottom: '0.5rem' }}>{proj.title}</h3>
-                <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem', marginBottom: '1.5rem', minHeight: '60px' }}>{proj.desc}</p>
-                <div style={{ display: 'flex', gap: '1rem' }}>
-                  <a href={proj.link} className="text-gradient" style={{ fontWeight: 600, fontSize: '0.9rem' }}>Live Demo →</a>
-                  <a href={proj.github} style={{ color: 'rgba(255,255,255,0.5)', fontWeight: 600, fontSize: '0.9rem' }}>GitHub</a>
+                <h3 style={{ marginBottom: '0.5rem', fontSize: '1.1rem' }}>{proj.title}</h3>
+                <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem', marginBottom: '1.5rem', minHeight: '80px', lineHeight: 1.5 }}>
+                  {proj.desc}
+                </p>
+                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                  {proj.link && <a href={proj.link} className="text-gradient" style={{ fontWeight: 600, fontSize: '0.9rem' }}>Live Demo →</a>}
+                  {proj.github && <a href={proj.github} style={{ color: 'rgba(255,255,255,0.5)', fontWeight: 600, fontSize: '0.9rem' }}>GitHub</a>}
                 </div>
               </div>
             </div>
@@ -127,7 +129,10 @@ export default function Home() {
         <p style={{ color: 'rgba(255,255,255,0.7)', maxWidth: '500px', margin: '0 auto 3rem' }}>
           I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
         </p>
-        <a href="mailto:your.email@example.com" className="btn btn-primary" style={{ padding: '1rem 3rem', fontSize: '1.1rem' }}>Say Hello</a>
+        <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+          <a href="mailto:kevinariel.yap1@gmail.com" className="btn btn-primary" style={{ padding: '1rem 3rem', fontSize: '1.1rem' }}>Email Me</a>
+          <a href="https://github.com/kevinariel1" target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ padding: '1rem 3rem', fontSize: '1.1rem' }}>GitHub</a>
+        </div>
       </section>
     </div>
   );
@@ -135,25 +140,25 @@ export default function Home() {
 
 const PROJECTS = [
   {
-    title: 'E-Commerce Platform',
-    desc: 'A full-featured online store with payment integrations, real-time inventory, and user dashboard.',
+    title: 'Financial Tracker App',
+    desc: 'A full-stack financial tracking application built using the MERN stack. Ready to be deployed on Vercel.',
     link: '#',
     github: '#',
     color1: '#4facfe',
     color2: '#00f2fe'
   },
   {
-    title: 'Task Management SaaS',
-    desc: 'Collaborative kanban boards for teams with real-time updates and notifications.',
-    link: '#',
+    title: 'ERP Project - Bakery Shop',
+    desc: 'An Enterprise Resource Planning system created for a bakery shop. Built securely using the PERN stack.',
+    link: '',
     github: '#',
     color1: '#f093fb',
     color2: '#f5576c'
   },
   {
-    title: 'AI Image Generator',
-    desc: 'Web app wrapping stable diffusion API to generate missing assets seamlessly.',
-    link: '#',
+    title: 'ERP - Agriculture Supply Chain',
+    desc: 'An advanced agriculture supply chain platform utilizing the PERN stack, TypeScript, and Prisma ORM for type safety.',
+    link: '',
     github: '#',
     color1: '#43e97b',
     color2: '#38f9d7'
