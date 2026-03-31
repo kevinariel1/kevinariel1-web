@@ -105,8 +105,15 @@ export default function Home() {
         <div className="grid-3">
           {PROJECTS.map((proj, idx) => (
             <div key={idx} className="glass project-card" style={{ overflow: 'hidden', padding: 0, transition: 'transform 0.3s' }}>
-              <div style={{ height: '200px', background: `linear-gradient(145deg, ${proj.color1}, ${proj.color2})`, display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '1rem' }}>
-                 <h3 style={{ color: 'white', opacity: 0.9, margin: 0, textShadow: '0 2px 10px rgba(0,0,0,0.5)', fontSize: '1.25rem' }}>{proj.title} Mockup</h3>
+              <div style={{ height: '200px', position: 'relative', background: `linear-gradient(145deg, ${proj.color1}, ${proj.color2})`, display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '1rem' }}>
+                 {/* 💡 HOW TO ADD REAL IMAGES:
+                     1. Take a screenshot (using Snipping Tool, Mac screenshot, etc) and crop it cleanly.
+                     2. Save it as a .png or .jpg (e.g. "finance.png") inside the `public/` folder in this Next.js project.
+                     3. Uncomment the image element below and delete this gradient background setup. 
+
+                     <img src={`/${proj.image}`} alt={proj.title} style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }} /> 
+                 */}
+                 <h3 style={{ color: 'white', opacity: 0.9, margin: 0, textShadow: '0 2px 10px rgba(0,0,0,0.5)', fontSize: '1.25rem', position: 'relative', zIndex: 2 }}>{proj.title} Mockup</h3>
               </div>
               <div style={{ padding: '2rem' }}>
                 <h3 style={{ marginBottom: '0.5rem', fontSize: '1.1rem' }}>{proj.title}</h3>
@@ -142,25 +149,28 @@ const PROJECTS = [
   {
     title: 'Financial Tracker App',
     desc: 'A full-stack financial tracking application built using the MERN stack. Ready to be deployed on Vercel.',
-    link: '#',
-    github: '#',
+    link: 'https://financial-tracker-alpha-eight.vercel.app/',
+    github: 'https://github.com/kevinariel1/financial-tracker.git',
     color1: '#4facfe',
-    color2: '#00f2fe'
+    color2: '#00f2fe',
+    image: 'finance.png' // Change this to your actual screenshot filename in the public folder
   },
   {
     title: 'ERP Project - Bakery Shop',
     desc: 'An Enterprise Resource Planning system created for a bakery shop. Built securely using the PERN stack.',
     link: '',
-    github: '#',
+    github: 'https://github.com/kevinariel1/bakery-erp.git',
     color1: '#f093fb',
-    color2: '#f5576c'
+    color2: '#f5576c',
+    image: 'bakery.png'
   },
   {
     title: 'ERP - Agriculture Supply Chain',
     desc: 'An advanced agriculture supply chain platform utilizing the PERN stack, TypeScript, and Prisma ORM for type safety.',
     link: '',
-    github: '#',
+    github: 'https://github.com/kevinariel1/agritech-erp.git',
     color1: '#43e97b',
-    color2: '#38f9d7'
+    color2: '#38f9d7',
+    image: 'agritech.png'
   }
 ];
