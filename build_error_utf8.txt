@@ -1,0 +1,57 @@
+﻿
+> personal-portfolio@0.1.0 build
+> next build
+
+npm : ΓÜá Warning: Next.js inferred your 
+workspace root, but it may not be correct.
+At line:1 char:1
++ npm run build > build_error.txt 2>&1
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecifie 
+   d: (ΓÜá Warning: Ne...not be correct.  
+  :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeComma 
+   ndError
+ 
+ We detected multiple lockfiles and 
+selected the directory of 
+C:\Users\ACER\package-lock.json as the 
+root directory.
+ To silence this warning, set 
+`turbopack.root` in your Next.js config, 
+or consider removing one of the lockfiles 
+if it's not needed.
+   See https://nextjs.org/docs/app/api-ref
+erence/config/next-config-js/turbopack#roo
+t-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\ACER\Dropbox\PC\Documents\Po
+rtofolio\Personal Web\package-lock.json
+
+Γû▓ Next.js 16.2.1 (Turbopack)
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 3.9s
+  Running TypeScript ...
+  Finished TypeScript in 2.5s ...
+  Collecting page data using 5 workers ...
+  Generating static pages using 5 workers (0/4) ...
+Error occurred prerendering page "/". 
+Read more: https://nextjs.org/docs/message
+s/prerender-error
+Error: Event handlers cannot be passed to 
+Client Component props.
+  {src: ..., alt: ..., style: ..., 
+onError: function onError}
+                                          
+  ^^^^^^^^^^^^^^^^
+If you need interactivity, consider 
+converting part of this to a Client 
+Component.
+    at stringify (<anonymous>) {
+  digest: '3514947585'
+}
+Export encountered an error on /page: /, 
+exiting the build.
+Γ¿» Next.js build worker exited with 
+code: 1 and signal: null

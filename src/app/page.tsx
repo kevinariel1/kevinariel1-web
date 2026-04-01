@@ -148,16 +148,16 @@ export default function Home() {
 const PROJECTS = [
   {
     title: 'Financial Tracker App',
-    desc: 'A full-stack financial tracking application built using the MERN stack. Ready to be deployed on Vercel.',
+    desc: 'A personal finance management app focused on data privacy and disciplined budgeting. It transforms manual transaction records into visual charts that help users monitor their cash flow independently without ads or third-party tracking.',
     link: 'https://financial-tracker-alpha-eight.vercel.app/',
     github: 'https://github.com/kevinariel1/financial-tracker.git',
     color1: '#4facfe',
     color2: '#00f2fe',
-    image: 'financial_tracker.jpeg' // Change this to your actual screenshot filename in the public folder
+    image: 'financial_tracker.jpeg'
   },
   {
     title: 'ERP Project - Bakery Shop',
-    desc: 'An Enterprise Resource Planning system created for a bakery shop. Built securely using the PERN stack.',
+    desc: 'Micro ERP solution for bakery that integrates raw material stock tracking, employee account management (RBAC), and real-time transaction data synchronization.',
     link: '',
     github: 'https://github.com/kevinariel1/bakery-erp.git',
     color1: '#f093fb',
@@ -172,5 +172,14 @@ const PROJECTS = [
     color1: '#43e97b',
     color2: '#38f9d7',
     image: 'agritech.jpeg'
+  },
+  {
+    title: 'I Love PDF Clone',
+    desc: 'Standalone PDF manipulation tool with anti-overlap input validation and interactive visual page preview (dynamic color)',
+    link: '',
+    github: 'https://github.com/kevinariel1/ILovePDF-clone.git',
+    color1: '#f093fb',
+    color2: '#f5576c',
+    image: 'pdfclone.jpeg'
   }
 ];
