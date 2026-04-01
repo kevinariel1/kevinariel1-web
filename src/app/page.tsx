@@ -152,7 +152,7 @@ const PROJECTS = [
     github: 'https://github.com/kevinariel1/financial-tracker.git',
     color1: '#4facfe',
     color2: '#00f2fe',
-    image: 'financial_tracker.jpeg' // Change this to your actual screenshot filename in the public folder
+    image: '../../public/financial_tracker.jpeg' // Change this to your actual screenshot filename in the public folder
   },
   {
     title: 'ERP Project - Bakery Shop',
